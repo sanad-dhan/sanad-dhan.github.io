@@ -75,21 +75,22 @@ p { line-height: 1.9; }
 
 .tm-bg-left,
 .tm-bg-right {
-    position: relative;
-    width: 50%;
+    position: fixed;   /* keep it full-height */
+    top: 0;
+    right: 0;
+    width: 73%;        /* increase so it starts more to the left (try 65–75%) */
     height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
 }
 
-.tm-bg-right { background-color: rgba(0,0,0,0.5); }
+.tm-bg-right { background-color: rgba(0,0,0,0); }
 
-.tm-bg-left {
-    border-right: 150px solid rgba(0, 0, 0, 0.5);
-    border-top: 100vh solid transparent;
-}
+
 
 .tm-bg-controls-wrapper {
     display: inline-block;
-    margin-left: -150px;
+    margin-left: -50px;
 }
 
 .tm-bg-control {
@@ -342,5 +343,14 @@ textarea {
 /* Shift navbar items slightly to the left */
 .navbar-nav {
     margin-left: 0px; /* Adjust value as needed */
+}
+
+.tm-sitename {
+    position: fixed;
+    top: 50px;
+    left: 30px; /* move it to the right so it doesn’t overlap the sidebar */
+    font-size: 40px;
+    color: white;
+    z-index: 2000; /* stays above everything */
 }
 
