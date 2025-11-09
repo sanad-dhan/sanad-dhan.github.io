@@ -1,0 +1,247 @@
+/********** Template CSS **********/
+:root {
+  --primary: #bd30d6; /* soft purple */
+  --secondary: #ffffff;
+  --light: #F2F2F2;
+  --dark: #dae7f4;
+}
+
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease-out, visibility 0s linear .2s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .2s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .sticky-lg-top.vh-100 {
+    height: 100% !important;
+  }
+}
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.btn-square {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-lg-square {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-primary {
+  color: #ab2525;
+}
+
+.typed-cursor {
+  display: none !important;
+}
+
+
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.title {
+  position: relative;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 0;
+  border: 2px solid var(--light);
+  border-radius: 10px;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  border-radius: 2px;
+  background: var(--light);
+}
+
+.progress {
+  height: 5px;
+}
+
+.progress .progress-bar {
+  width: 0px;
+  transition: 2s;
+}
+
+.service-item {
+  padding: 30px;
+  text-align: center;
+  background: var(--secondary);
+}
+
+.service-item i {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+  color: var(--primary);
+  transition: .5s;
+}
+
+.service-item:hover i {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.portfolio-item .portfolio-btn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  font-size: 90px;
+  background: rgba(44, 62, 80, .9);
+  opacity: 0;
+  transition: .5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  top: 30px;
+  left: 30px;
+}
+
+.portfolio-item i {
+  opacity: 0;
+  transition: .3s;
+  transition-delay: .3s;
+}
+
+.portfolio-item:hover i {
+  opacity: 1;
+}
+
+.testimonial-carousel .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.testimonial-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--light);
+}
+
+.testimonial-carousel .owl-dot.active {
+  background: var(--primary);
+}
+
+.resume-box {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+
+.project-description {
+    margin-left: 20px;   /* indentation amount */
+    text-align: justify; /* optional – keeps text neat */
+}
+
+.achievements-list {
+    max-width: 700px;
+}
+
+.achievement-item {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.achievement-item span:first-child {
+    font-weight: 500;
+}
+
+.achievement-item:last-child {
+    border-bottom: none !important;
+}
+/* Remove the section divider after Achievements */
+section:nth-of-type(4) {
+    border-bottom: none !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+.text-primary {
+  color: #d6ba30 !important;   /* your preferred color */
+}
+
+.back-to-top {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.wow {
+  visibility: visible !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
